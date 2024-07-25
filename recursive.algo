@@ -1,0 +1,21 @@
+// iterative
+FUNCTION pow(x,n : INTEGER) : INTEGER
+VAR
+    result : INTEGER := 1;
+    i : INTEGER;
+BEGIN
+    FOR i FROM 1 TO n  DO
+        result := result *x;
+    END_FOR
+    RETURN result ;
+END
+
+// recursive
+FUNCTION pow(x,n : INTEGER) : INTEGER
+BEGIN
+    IF (n = 1) THEN
+        RETURN x;
+    ELSE
+        RETURN x * pow(x, n-1);
+    END_IF
+END
